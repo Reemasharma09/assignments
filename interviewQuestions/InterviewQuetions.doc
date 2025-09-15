@@ -1,0 +1,23 @@
+Interview Question's Java
+1.What is the difference between JDK and JRE?
+Ans:JDK-stands for Java Development Kit  to create,compile and debug java applications.
+JRE-stands for Java Runtime Environment.it provides environment to run java applications.
+2.. What is Java Virtual Machine (JVM)?
+Ans:It act as a translator between your java code and your computer's operating system.
+3.What are the different types of memory area allocated by JVM?
+Ans:Heap,Stack,PC Registers,Execution Engine .
+Native method stacks? It contains all the native(that is not Java) methods used by the application. These are used when Java communicates or invoke native system-level resources through native method calls.
+4. What is JIT compiler?
+Ans:JIT(Just-In-Time) compiler is a part of JVM that improves the performance java programs by compiling bytecode into native machine code.
+5. How Java platform is different from other platforms?
+Ans:Java is a platform Independent Language. Programmer can develop Java code on any OS. Most of the other platforms do not have this capability.
+6. Why people say that Java is ‘write once and run anywhere’ language?
+Ans:Java program can be written once and than run on any platform without the need of any additional changes and modification.
+7. How does ClassLoader work in Java?
+Ans:ClassLoaders are responsible for loading the classes into memory.It performs three activities Loading,Linking,Initialization.
+8. Do you think ‘main’ used for main method is a
+keyword in Java?
+Ans:'main' is not the keyword in java.It is just a identifier(a method name).main is required by the  JVM to start the execution.we can use main as a variable,method outside the main context.
+9. Can we write main method as public void
+static instead of public static void?
+Ans:No,it follows a specific order,in which we first write access modifier [public],static/final[static],return type[void].
