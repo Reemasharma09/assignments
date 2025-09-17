@@ -1,28 +1,28 @@
-package Control_Flow.Level_3;
+package Control_Flow.Level_2;
 
 import java.util.Scanner;
 
 public class Q_4 {
 	public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number: ");
+        System.out.print("Enter a positive integer: ");
         int number = sc.nextInt();
 
-        boolean isPrime = true;
-        if (number <= 1) {
-            isPrime = false;
+        if (number < 1) {
+            System.out.println("The number " + number + " is not a positive integer.");
         } else {
-            for (int i = 2; i < number; i++) {
-                if (number % i == 0) {
-                    isPrime = false;
-                    break;
+    
+            for (int i = 1; i <= number; i++) {
+                if (i % 3 == 0 && i % 5 == 0) {
+                    System.out.println("FizzBuzz");
+                } else if (i % 3 == 0) {
+                    System.out.println("Fizz");
+                } else if (i % 5 == 0) {
+                    System.out.println("Buzz");
+                } else {
+                    System.out.println(i);
                 }
             }
-        }
-        if (isPrime) {
-            System.out.println(number + " is a Prime Number.");
-        } else {
-            System.out.println(number + " is NOT a Prime Number.");
         }
     }
 }

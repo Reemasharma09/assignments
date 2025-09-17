@@ -1,28 +1,21 @@
-package Control_Flow.Level_3;
+package Control_Flow.Level_2;
 
 import java.util.Scanner;
 
 public class Q_7 {
 	public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter your weight (in kg): ");
-        double weight = sc.nextDouble();
-
-        System.out.print("Enter your height (in cm): ");
-        double heightCm = sc.nextDouble();
-        double heightM = heightCm / 100.0;
-        double bmi = weight / (heightM * heightM);
-        String status;
-        if (bmi <= 18.4) {
-            status = "Underweight";
-        } else if (bmi <= 24.9) {
-            status = "Normal";
-        } else if (bmi <= 39.9) {
-            status = "Overweight";
+        System.out.print("Enter a positive integer: ");
+        int number = sc.nextInt();
+        if (number < 1) {
+            System.out.println("The number " + number + " is not a positive integer.");
         } else {
-            status = "Obese";
+            System.out.print("Factors of " + number + " are: ");
+            for (int i = 1; i <= number; i++) {
+                if (number % i == 0) {
+                    System.out.print(i + " ");
+                }
+            }
         }
-        System.out.printf("Your BMI is: %.2f%n", bmi);
-        System.out.println("Weight Status: " + status);
     }
 }

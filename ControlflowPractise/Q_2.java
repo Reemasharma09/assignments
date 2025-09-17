@@ -1,17 +1,18 @@
-package Control_Flow.Level_3;
+package Control_Flow.Level_2;
 
 import java.util.Scanner;
 
 public class Q_2 {
 	public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a year (>= 1582): ");
-        int year = sc.nextInt();
-
-        if (year >= 1582 && ( (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0) )) {
-            System.out.println(year + " is a Leap Year.");
-        } else {
-            System.out.println(year + " is NOT a Leap Year.");
+        System.out.print("Enter the employee's salary: ");
+        double salary = sc.nextDouble();
+        System.out.print("Enter the years of service: ");
+        int yearsOfService = sc.nextInt();
+        double bonus = 0.0;
+        if (yearsOfService > 5) {
+            bonus = salary * 0.05; 
         }
+        System.out.println("The bonus amount is: " + bonus);
     }
 }

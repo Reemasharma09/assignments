@@ -1,33 +1,24 @@
-package Control_Flow.Level_3;
+package Control_Flow.Level_2;
 
 import java.util.Scanner;
 
 public class Q_1 {
 	public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a year: ");
-        int year = sc.nextInt();
+        System.out.print("Enter a natural number: ");
+        int number = sc.nextInt();
 
-        if (year < 1582) {
-            System.out.println("The program works only for years >= 1582");
+        if (number < 1) {
+            System.out.println("The number " + number + " is not a natural number.");
         } else {
-            if (year % 400 == 0) {
-                System.out.println(year + " is a Leap Year ");
-            } else if (year % 100 == 0) {
-                System.out.println(year + " is NOT a Leap Year ");
-            } else if (year % 4 == 0) {
-                System.out.println(year + " is a Leap Year ");
-            } else {
-                System.out.println(year + " is NOT a Leap Year ");
+  
+            for (int i = 1; i <= number; i++) {
+                if (i % 2 == 0) {
+                    System.out.println(i + " is even");
+                } else {
+                    System.out.println(i + " is odd");
+                }
             }
         }
-
-        if (year >= 1582 && ( (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0) )) {
-            System.out.println(year + " is a Leap Year ");
-        } else if (year >= 1582) {
-            System.out.println(year + " is NOT a Leap Year");
-        }
-
-        sc.close();
     }
 }

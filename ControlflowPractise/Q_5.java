@@ -1,31 +1,29 @@
-package Control_Flow.Level_3;
+package Control_Flow.Level_2;
 
 import java.util.Scanner;
 
 public class Q_5 {
 	public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter an integer: ");
+        System.out.print("Enter a positive integer: ");
         int number = sc.nextInt();
 
-        if (number < 0) {
-            System.out.println("Negative numbers cannot be Armstrong numbers");
-            sc.close();
-            return;
-        }
-        int sum = 0;
-        int originalNumber = number;
-
-        while (originalNumber != 0) {
-            int digit = originalNumber % 10;
-            int cube = digit * digit * digit; 
-            sum += cube;
-            originalNumber = originalNumber / 10;
-        }
-        if (sum == number) {
-            System.out.println(number + " is an Armstrong number.");
+        if (number < 1) {
+            System.out.println("The number " + number + " is not a positive integer.");
         } else {
-            System.out.println(number + " is NOT an Armstrong number.");
+            int i = 1;
+            while (i <= number) {
+                if (i % 3 == 0 && i % 5 == 0) {
+                    System.out.println("FizzBuzz");
+                } else if (i % 3 == 0) {
+                    System.out.println("Fizz");
+                } else if (i % 5 == 0) {
+                    System.out.println("Buzz");
+                } else {
+                    System.out.println(i);
+                }
+                i++;
+            }
         }
     }
 }

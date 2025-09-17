@@ -1,25 +1,25 @@
-package Control_Flow.Level_3;
+package Control_Flow.Level_2;
 
 import java.util.Scanner;
 
 public class Q_8 {
 	public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number: ");
+        System.out.print("Enter a positive integer: ");
         int number = sc.nextInt();
 
-        int originalNumber = number; 
-        int sum = 0;
-
-        while (number > 0) {
-            int digit = number % 10;  
-            sum += digit;             
-            number = number / 10;    
-        }
-        if (originalNumber % sum == 0) {
-            System.out.println(originalNumber + " is a Harshad Number.");
+        if (number < 1) {
+            System.out.println("The number " + number + " is not a positive integer.");
         } else {
-            System.out.println(originalNumber + " is NOT a Harshad Number.");
+            System.out.print("Factors of " + number + " are: ");
+            int counter = 1;
+
+            while (counter <= number) {
+                if (number % counter == 0) {
+                    System.out.print(counter + " ");
+                }
+                counter++;
+            }
         }
     }
 }
